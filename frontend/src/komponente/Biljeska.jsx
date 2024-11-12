@@ -1,4 +1,4 @@
-import { useState } from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Biljeska(props){
 
@@ -10,7 +10,10 @@ function Biljeska(props){
         <div className="note">
             <h1>{props.naslov}</h1>
             <p>{props.sadrzaj}</p>
-            <button onClick={klik}>DELETE</button>
+            <button onClick={klik}>
+                <DeleteIcon />
+            </button>
+            
         </div>
     )
 
