@@ -12,7 +12,7 @@
   }
   
   header {
-    background-color: #f5ba13;
+    background-color: #001F3F;
     margin: auto -16px;
     padding: 16px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -24,7 +24,7 @@
     font-weight: 200;
   }
   
-  footer {
+ /* footer {
     position: absolute;
     text-align: center;
     bottom: 0;
@@ -34,7 +34,7 @@
   
   footer p {
     color: #ccc;
-  }
+  }*/
   .note {
     background: #fff;
     border-radius: 7px;
@@ -90,7 +90,7 @@
     position: absolute;
     right: 18px;
     bottom: -18px;
-    background: #f5ba13;
+    background-color: #001F3F;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -100,4 +100,49 @@
     cursor: pointer;
     outline: none;
   }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--highlight-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    min-height: 50px;
+    color: #00204a;
+    
   
+  }
+  
+  footer > div {
+    width: 250px;
+  }
+  
+  div.author {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #gh-link {
+    text-decoration: none;
+    letter-spacing: 0;
+    color: var(--font-medium);
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    height: 38px;
+  }
+  
+  #gh-logo {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #gh-link:hover #gh-logo {
+    transform: rotate(360deg) scale(1.2);
+  }
