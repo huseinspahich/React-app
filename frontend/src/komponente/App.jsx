@@ -3,12 +3,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import KreirajBiljeske from "./KreirajBiljeske";
 import Biljeska from "./Biljeska";
-import { ThemeProvider } from './ThemeContext'; // Uvozimo ThemeProvider
+import { ThemeProvider } from './ThemeContext';
 
 function App() {
   const [biljeske, postaviBiljeske] = useState([]);
 
   function dodajBiljesku(biljeska) {
+    console.log("Dodavanje bilješke:", biljeska);
     postaviBiljeske((prevValue) => {
       return [...prevValue, biljeska];
     });
@@ -23,7 +24,7 @@ function App() {
   }
 
   return (
-    <ThemeProvider> {/* Obavijamo aplikaciju sa ThemeProvider */}
+    <ThemeProvider>
       <Header />
       <KreirajBiljeske dodaj={dodajBiljesku} />
       {biljeske.map((biljeska, index) => {
@@ -44,3 +45,4 @@ function App() {
 }
 
 export default App;
+

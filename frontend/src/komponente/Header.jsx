@@ -3,7 +3,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import { Button } from "@mui/material";
-import { useTheme } from './ThemeContext';  // Uvozimo useTheme hook
+import { useTheme } from './ThemeContext'; 
 
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -14,8 +14,7 @@ function Header() {
     setAnchorEl(null);
   };
   const open = Boolean(anchorEl);
-
-  const { isDarkMode, toggleTheme } = useTheme();  // Koristimo hook za promjenu teme
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <header>
@@ -25,7 +24,6 @@ function Header() {
         {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
       </Button>
 
-      {/* Dugme za odjavu */}
       <Button onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
         <LogoutIcon />
       </Button></div>

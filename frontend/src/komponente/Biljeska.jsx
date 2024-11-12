@@ -10,15 +10,13 @@ function Biljeska(props){
         props.obrisi(props.id)
     }
     const handlePopoverOpen = (event) => {
-        setAnchorEl(event.currentTarget); // Postavlja anchorEl na dugme
+        setAnchorEl(event.currentTarget); 
     };
   
-    // **Funkcija za zatvaranje Popovera**
     const handlePopoverClose = () => {
-        setAnchorEl(null); // Zatvara popover
+        setAnchorEl(null); 
     };
   
-    // Provjera da li je Popover otvoren
     const open = Boolean(anchorEl);
 
     return(
