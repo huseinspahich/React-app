@@ -6,24 +6,37 @@ import Biljeska from "./Biljeska";
 
 function App() {
 
-    const[biljeska,postaviBiljeske] = useState([])
+    const[biljeske,postaviBiljeske] = useState([])
 
     function dodajBiljesku(biljeska){
       postaviBiljeske((prevValue) => {
         return [...prevValue, biljeska ]
       })
     }
+    function obrisiBiljesku(id){
+      postaviBiljeske((prevValue) => {
+        return prevValue.filter((biljeska,index) => {
+          return index !== id
+        });
+      });
+    }
 
   return (
     <>
       <Header />
       <KreirajBiljeske dodaj={dodajBiljesku}/>
-      {biljeska.map((biljeska,index) => {
+      {biljeske.map((biljeska,index) => {
+        return(
         <Biljeska 
-        
+        key={index}
+        index= {index}
+        id={index}
+        naslov={biljeska.naslov}
+        sadrzaj={biljeska.sadrzaj}
+        obrisi={obrisiBiljesku}
         />
+      )  
       })}
-      
       <Footer/>
     </>
   )

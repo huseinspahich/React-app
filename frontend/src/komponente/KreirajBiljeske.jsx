@@ -7,8 +7,7 @@ function KreirajBiljeske(props) {
         sadrzaj:""
     });    
     function upravljajUnosima(event) {
-        const[name,value] = event.target;
-
+        const{name,value} = event.target;
         postaviUnos((prevValue)=> {
             return {
                 ...prevValue,
@@ -17,12 +16,11 @@ function KreirajBiljeske(props) {
         })
     };
     function dugmeDodaj(event){
-        props.dodaj(biljeska)
+        props.dodaj(unos)
         postaviUnos({
             naslov:"",
-            sadrzaj:""
+            sadrzaj:"",
         })
-  
         event.preventDefault();
     }
 
@@ -36,6 +34,6 @@ function KreirajBiljeske(props) {
       </div>
     );
   }
-  
+
   export default KreirajBiljeske;
   
