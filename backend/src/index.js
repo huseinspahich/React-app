@@ -35,8 +35,12 @@ app.post('/add-note', async (req, res) => {
   app.delete('/delete-note/:id', async (req, res) => {
     const { id } = req.params;  
     try {
-      const result = await db.query('DELETE * FROM biljeske WHERE id = $1', [id]);
-      res.status(200).send('Bilješka obrisana');
+      const result = await db.query('DELETE FROM biljeske WHERE id = $1', [id]);
+      if (result.rowCount > 0) {
+        res.status(200).send('Bilješka obrisana');
+    } else {
+        res.status(404).send('Bilješka nije pronađena');
+    }
     } catch (err) {
       console.error(err);
       res.status(500).send('Greška pri brisanju bilješke');
