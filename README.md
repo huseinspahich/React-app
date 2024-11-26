@@ -3,7 +3,7 @@ This is a basic full-stack web application for managing notes. It allows users t
   
 ## Technologies  
 - **Backend:** Express.js, PostgreSQL
-- **Frontend:** React.js, Axios
+- **Frontend:** React.js, Axios  
 
 ![NOTE KEEPER](https://github.com/user-attachments/assets/56db5f4d-8155-417e-b1fb-1e618e07a14c)
 ![KEEPER](https://github.com/user-attachments/assets/341c7456-1c11-48a9-96bf-7f85dd7c89e5)
